@@ -1,0 +1,48 @@
+# A simple way to bulk delete large amounts of email in Gmail without any errors.
+
+Gmail's interface does not support automated bulk delete operations, so you will have to repeat the process manually. 
+However, you can partially automate the process using some tools. 
+One method is to use Google Script, a programming language that can be integrated with Gmail. Follow the steps below:
+
+Create a Google Script:
+
+Log in to your Gmail account.
+
+Go to Google Apps Script (https://script.google.com/).
+
+Create a New Script:
+
+Click on the "Start Scripting" button.
+
+
+Paste the Code:
+
+function deleteEmails() {
+  var threads = GmailApp.search("from:sender@example.com");
+  for (var i = 0; i < threads.length; i++) {
+    threads[i].moveToTrash();
+  }
+}
+
+use the mail id from which you wish to delete so many mails.
+
+Save the Script:
+
+Click on the save icon or usually gmail save it automatically.
+
+On the right hand click Deploy button, click new deploy.
+in the new window click icon in front of select type and select web app and then click Deploy then let it update and then Done.
+
+
+Now Click on top row :
+
+Allow the authorization to the script to access your Gmail account.
+
+once authorization gets successful click on run and click on Execution log button to see progress.
+
+You may need to click run multiple times as it depends on number of mails you have.
+
+But once you see execution getting complete in just a second you can go to your gmail inbox and see the mails are deleted.
+
+Please note that using scripts like these should be approached with caution, and you should understand the code you are running. 
+Additionally, it's a good practice to test the script with a small set of emails before applying it to a larger number.
