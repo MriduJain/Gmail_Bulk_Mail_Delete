@@ -1,4 +1,4 @@
-# A simple way to delete large amounts of emails in Gmail without any errors.
+# A Simple way to delete large amounts of emails in Gmail without any errors.
 
 Gmail's interface does not support automated bulk delete operations, so you will have to repeat the process manually. 
 However, you can partially automate the process using some tools. 
